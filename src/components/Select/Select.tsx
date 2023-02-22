@@ -1,0 +1,28 @@
+import { useMemo, useRef } from 'react'
+import styles from './Select.module.scss'
+
+const Select = ({ onChange, options: optionsProp, label }: Select) => {
+  const options = useMemo(() => {
+    return optionsProp
+  }, [optionsProp])
+
+  const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    onChange(e.target.value)
+    // label: options.find(option => option.value === e.target.value)!.value
+  }
+
+  return (
+    <div className={styles.Select}>
+      <label htmlFor="filter">{label || 'Filter by'}</label>
+      <select name="filter" id="" onChange={handleSelect}>
+        {options.map(option => (
+          <option value={option.value} key={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </div>
+  )
+}
+
+export default Select

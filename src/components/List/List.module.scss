@@ -1,0 +1,14 @@
+.List {
+  &__Content {
+    display: grid;
+    gap: 1rem;
+  }
+  &__Header,
+  &__Content > &__Item {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+    gap: 1rem;
+  }
+  &__Filter {
+  }
+}

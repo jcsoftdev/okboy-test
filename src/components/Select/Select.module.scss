@@ -1,0 +1,14 @@
+.Select {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 0 1.5rem;
+
+  select {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #1a2e3b;
+    color: #fff;
+  }
+}
