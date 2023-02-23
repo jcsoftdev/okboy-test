@@ -27,12 +27,15 @@ interface CoinDTO {
 interface Coin extends CoinDTO {
   className?: string
   onClick?: () => void
+  onAddFavorite?: (id: string) => void
+  isFavorite?: boolean
 }
 
 interface Select {
   options: SelectItem[]
   onChange: (value: T | string) => void
   label?: string
+  value?: number | string
 }
 
 interface SelectItem {

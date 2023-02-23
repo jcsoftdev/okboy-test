@@ -3,12 +3,18 @@
     display: grid;
     gap: 1rem;
   }
-  &__Header,
   &__Content > &__Item {
     display: grid;
-    grid-template-columns: 50px 1fr 1fr;
+    grid-template-columns: 50px 1fr 1fr 60px;
+    padding: 1rem 2rem;
     gap: 1rem;
   }
-  &__Filter {
+  &__Header {
+    h1 {
+      margin: 0;
+    }
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
   }
 }

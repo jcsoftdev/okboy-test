@@ -11,6 +11,7 @@ function App() {
     const interval = minutes * 60 * 1000
 
     const fetchCoins = async () => {
+      console.log('fetching coins...')
       const response = await api.getCoins()
       setCoins(response.coins)
     }

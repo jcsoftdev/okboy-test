@@ -1,7 +1,7 @@
-import { useMemo, useRef } from 'react'
+import { useMemo } from 'react'
 import styles from './Select.module.scss'
 
-const Select = ({ onChange, options: optionsProp, label }: Select) => {
+const Select = ({ onChange, options: optionsProp, label, value }: Select) => {
   const options = useMemo(() => {
     return optionsProp
   }, [optionsProp])
@@ -14,7 +14,7 @@ const Select = ({ onChange, options: optionsProp, label }: Select) => {
   return (
     <div className={styles.Select}>
       <label htmlFor="filter">{label || 'Filter by'}</label>
-      <select name="filter" id="" onChange={handleSelect}>
+      <select name="filter" id="" onChange={handleSelect} value={value}>
         {options.map(option => (
           <option value={option.value} key={option.value}>
             {option.label}
