@@ -7,7 +7,7 @@ function App() {
   const [coins, setCoins] = useState<Coin[]>([])
 
   useEffect(() => {
-    const minutes = 0.5
+    const minutes = 1
     const interval = minutes * 60 * 1000
 
     const fetchCoins = async () => {
